@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donation</title>
+    <link rel='stylesheet' type="text/css" href="donation.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="logo">
+        </a>
+    
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="Donation.html">Donation</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+        </ul>
+    
+        <div class="h-btn">
+            <a href="login.php" class="h-btn1">Login</a>
+            <a href="signup.html" class="h-btn2">Sign up</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    
+    </header>
+
+    <div class="container">
+        <div class="time">
+            <span>Donate</span>
+        </div>
+        <br>
+        <p>Select payment type</p>
+
+        <form action="donate.php" method="post">
+            <div class="confirm">
+                <select id="paymentType" name="paymentType">
+                    <option value="creditCard">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+            </div>
+
+            <div class="input">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="input">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="input">
+                <label for="amount">Amount:</label>
+                <input type="text" id="amount" name="amount" placeholder="Enter donation amount" required>
+            </div>
+
+            <br>
+            <br>
+
+            <button type="submit">Donate</button>
+
+            <p id="success-message" style="display: none; color: green;">Donated successfully!</p>
+            <p id="errorMessage" style="color: red;"></p>
+            
+            <p>By donating, you agree to our <span class="blue">terms of services</span> and <span
+                    class="blue">privacy policy</span></p>
+        </form>
+    </div>
+
+</body>
+
+</html>

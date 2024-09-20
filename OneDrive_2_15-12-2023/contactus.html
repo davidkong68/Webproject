@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="=en">
+<head>
+    <link rel="stylesheet" href ="contactus.css">
+    <link rel="icon" type="image/x-icon" href="lockpic.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact Us</title>
+    <meta charset="utf=8">
+    <meta name="viewpoint" content = "width= device-width, initial-scale= 1">
+
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="logo">
+    </a>
+
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="Donation.html">Donation</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+    </ul>
+
+    <div class="h-btn">
+        <a href="login.php" class="h-btn1">Login</a>
+        <a href="signup.html" class="h-btn2">Sign up</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+
+</header>
+    
+   
+    <div id="contactform">
+        <form onsubmit="event.preventDefault(); validateForm()">
+            <br>
+            <br>
+            <br>
+            <h1>Contact us</h1>
+            <br>
+
+            <div class="label1">
+            <label for="name">Name: </label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <small class="error"></small>
+             </div>
+
+             <div class="label1">
+            <label for="email">Email: </label>
+            <input type="text" id="email" placeholder="Enter your email">
+            <small class="error"></small>
+             </div>
+
+             <div class="label1">
+            <label for="message">Message: </label>
+            <textarea id="message" placeholder="Message" row="6"></textarea>
+            <small class="error"></small>
+             </div>
+
+            <div class="submitbutton">
+
+                <input type="submit" value="Send">
+                <p id="Success"></p>
+                
+            </div>
+
+
+
+
+            
+        </form>
+        <br>
+
+
+
+    </div>
+
+    <script src="contactus.js"></script>
+</body>
+</html>
+
