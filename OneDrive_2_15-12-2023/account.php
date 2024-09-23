@@ -113,7 +113,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["update_password"])) {
         <h1>Account</h1>
 
         <?php if (isset($_GET["success"]) && $_GET["success"] == 1): ?>
-            <p>Details updated successfully!</p>
+           
+            <p style="color: #98FF98;">Details updated successfully!</p>
+            <br>
         <?php endif; ?>
 
         <!-- Update Name Form -->
