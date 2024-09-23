@@ -49,20 +49,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["update_name"])) {
 // Handle form submission for updating the password
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["update_password"])) {
     $newPassword = $_POST["new_password"];
-    $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+  
 
     // Update the user password in the database using prepared statements
     $updatePasswordSql = "UPDATE user SET password_hash = ? WHERE id = ?";
     $updatePasswordStmt = $mysqli->prepare($updatePasswordSql);
-
-    //Check if the query was prepared correctly
-    if (!$updatePasswordStmt) {
-        die("Error preparing statement: " . $mysqli->error);   
-        die("Error preparing statement: " . $mysqli->error);   
-    }
-
+    $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
     $updatePasswordStmt->bind_param("si", $hashedPassword, $user_id);
     $updatePasswordStmt->execute();
+
     // Redirect back to the account page after updating
     header("Location: account.php?success=1");
     exit;
